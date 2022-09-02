@@ -1,0 +1,12 @@
+.form-size {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    background: #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+}

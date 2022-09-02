@@ -1,0 +1,21 @@
+.service-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 28px;
+    text-transform: capitalize;
+}
+
+form.search-form {
+    max-width: 600px;
+    margin: auto;
+    width: 90%;
+}
+
+img.logo {
+    max-width: 150px;
+}

@@ -1,0 +1,8 @@
+.social-logins button {
+    height: 50px;
+    font-size: 22px;
+    border-radius: 50%;
+    width: 50px;
+    border: 1px solid #1d1c1c;
+    margin: 5px;
+}
