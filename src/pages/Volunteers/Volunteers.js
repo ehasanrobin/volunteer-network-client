@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table';
 const Volunteers = () => {
     const [volunteers,setVolunteers] = useState([]);
     useEffect(()=> {
-        fetch("http://localhost:5000/volunteers")
+        fetch("https://fierce-brook-97765.herokuapp.com/volunteers")
         .then(res => res.json())
         .then(data => setVolunteers(data))
     },[])

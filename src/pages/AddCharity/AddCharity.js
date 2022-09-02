@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from "react-router-dom";
 
 const AddCharity = () => {
 
@@ -15,7 +14,7 @@ const AddCharity = () => {
         name: name,
         img: img,
     }
-    fetch('http://localhost:5000/events', {
+    fetch('https://fierce-brook-97765.herokuapp.com/events', {
   method: 'POST',
   headers: {
     'Accept': 'application/json, text/plain, */*',

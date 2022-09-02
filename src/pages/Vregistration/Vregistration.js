@@ -1,10 +1,9 @@
-import { onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import auth from '../../firebase/Firebase.init';
 import './Vregistration.css';
 const Vregistration = () => {
@@ -13,7 +12,7 @@ const Vregistration = () => {
     const {id} = useParams();
     const [event, setEvent] = useState({});
     useEffect(()=> {
-      fetch(`http://localhost:5000/events/${id}`)
+      fetch(`https://fierce-brook-97765.herokuapp.com/events/${id}`)
       .then(res => res.json())
       .then(data => setEvent(data));
     },[])
@@ -36,7 +35,7 @@ const Vregistration = () => {
         
       }
       // POST request using fetch() for volunteer form
-fetch("http://localhost:5000/volunteer", {    
+fetch("https://fierce-brook-97765.herokuapp.com/volunteer", {    
   // Adding method type
   method: "POST",
   // Adding body or contents to send

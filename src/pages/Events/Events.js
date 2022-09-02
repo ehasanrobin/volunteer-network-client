@@ -1,5 +1,5 @@
-import Button from 'react-bootstrap/Button';
 import React, { useEffect, useState } from 'react';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -11,7 +11,7 @@ const Events = () => {
     const [user,loading] = useAuthState(auth);
     const [events,setEvents] = useState([]);
     useEffect(()=> {
-        fetch(`http://localhost:5000/volunteer?email=${user?.email}`)
+        fetch(`https://fierce-brook-97765.herokuapp.com/volunteer?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setEvents(data));
     },[events])
@@ -19,7 +19,7 @@ const Events = () => {
     const handleDel = id => {
        const proceed = window.confirm("Are you sure? want to cancel this event?");
        if(proceed){
-         fetch(`http://localhost:5000/volunteer/${id}`, {
+         fetch(`https://fierce-brook-97765.herokuapp.com/volunteer/${id}`, {
   method: 'DELETE',
 })
 .then(res => res.json()) // or res.json()

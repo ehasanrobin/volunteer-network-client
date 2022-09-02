@@ -1,6 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import React, { useEffect, useState } from 'react';
-import { InputGroup,Form,Container, Row} from 'react-bootstrap';
+import { Container, Form, InputGroup, Row } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import Service from '../Service/Service';
 import "./Home.css";
 
@@ -8,7 +8,7 @@ const Home = () => {
     const [services,setServices] = useState([]);
 
     useEffect(()=> {
-        fetch("http://localhost:5000/events")
+        fetch("https://fierce-brook-97765.herokuapp.com/events")
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
